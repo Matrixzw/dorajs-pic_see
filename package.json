@@ -1,0 +1,40 @@
+{
+  "name": "dorajs-matrixzw-ystuji",
+  "displayName": "妹纸图",
+  "version": "1.0.1",
+  "uuid": "d6f3e048-7c49-45c1-b871-f8b0742f5067",
+  "description": "m.mzitu.com",
+  "icon": "/assets/icon.png",
+  "prefs": "assets/prefs.json",
+  "main": "main.js",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "chegege, z",
+    "fullName": "matrixzw",
+    "email": ""
+  },
+  "engineStrick": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "updates": "",
+  "contributes": {
+    "search": "list"
+  },
+  "homepage": "",
+  "engines": {
+    "dora": ">=1.8.0"
+  },
+  "keywords": [
+    "Dora.js"
+  ],
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "categories": [
+    "image"
+  ],
+  "donates": {}
+}
