@@ -1,116 +1,12 @@
 
-url_m = '1';
-if (undefined) {
-    console.log('true')
-} else {
-    console.log('fdakjk' + '/page/2/');
-    console.log(/(\d+)\/?$/.exec(url_m));
-    if (/(\d+)\/$/.exec(url_m)) {
-        console.log(url_m.replace(/\d+\/$/, Number(/(\d+)\/$/.exec(url_m)[1]) + 1))
-    }
-}
 
+data = `<p><span class="header">识别码:</span> <span style="color:#CC0000;">MMRAA-153</span></p><p><span class="header">发行时间:</span> 2020-06-26</p><p><span class="header">长度:</span> 97分钟</p><p class="header">制作商: </p><p><a href="https://avmoo.host/cn/studio/fa9cd58cc97e8d20">スパイスビジュアル</a></p><p class="header">发行商: </p><p><a href="https://avmoo.host/cn/label/74a6ab6a33f329d0">MARE</a></p><p class="header">系列:</p><p><a href="https://avmoo.host/cn/series/7dd7025036c4605e">清純クロニクル</a></p><p class="header">类别:</p><p><span class="genre"><a href="https://avmoo.host/cn/genre/c4145926405d550f">单体作品</a></span><span class="genre"><a href="https://avmoo.host/cn/genre/998ecc028c00f104">偶像艺人</a></span><span class="genre"><a href="https://avmoo.host/cn/genre/644ddb48c6a4db96">介绍影片</a></span><span class="genre"><a href="https://avmoo.host/cn/genre/5f9f62d40baa77cf">高画质</a></span></p>`
 
-page_function = (page) => {
-    if (page) {
-        return page.replace(/\d+\/$/, Number(/(\d+)\/$/.exec(page)[1]) + 1 + '/')
-    } else {
-        return 'https://m.mzitu.com/page/2/'
-    }
-}
-
-console.log(page_function(null))
-
-console.log((null || 1) + 1)
-
-console.log('1/76页'.replace('页', ''))
-
-
-// const spider = require('../assets/spider')
-// const axios = require('axios')
-// const cheerio = require('cheerio')
-// url = 'https://www.mzitu.com/xinggan/'
-// axios.get(url).then(res => {
-//     const $ = cheerio.load(res.data);
-//     list = $('ul.menu>li>a')
-//     items = [];
-//     for (i = 1; i < list.length; i++) {
-//         title = list.eq(i).attr('title');
-//         href = list.eq(i).attr('href');
-//         href = /com(\/.*?)$/.exec(href)[1] || ''
-//         items.push({ title, href });
-//     }
-//     console.log(items)
-// })
+console.log(/制作商/.test(data))
 
 
 
-
-
-
-console.log(encodeURI('杨晨'))
-
-
-// setTimeout(myFunc, 1500, 'funky');
-
-console.log(1 || 0)
-
-
-list = [];
-args = [
-    { title: '性感妹子', href: '/xinggan/' },
-    { title: '日本妹子', href: '/japan/' },
-    { title: '台湾妹子', href: '/taiwan/' },
-    { title: '清纯妹子', href: '/mm/' },
-    { title: '妹子自拍', href: '/zipai/' },
-    { title: '街拍美女', href: '/jiepai/' },
-    { title: '每日更新', href: '/all/' }
-];
-
-args.map(res => {
-    list.push({
-        title: res.title,
-        hrefada: res.href
-    })
-})
-
-a = 123
-if(undefined==undefined){
-    console.log('yes')
-}else{
-    console.log('nadafjk')
-}
-
-str = 'ad:ad,adfm,adf,adf,ad',
-str1 = 'daad:aa,af'.split(/[,:]/);
-str1.shift();
-console.log(str1)
-
-var array = {aada:'adfa'};
-// v 为数组中的值 i 为数组中的key
-switch(1){
-    case 1: console.log('afasd adfa ');
-    break;
-    case 2: console.log('adfasd')
-}
-
-data_show =[];
-if(1){
-    let str = 'afd:adfds,daf'.split(/[:,]/);
-    str.shift();
-    str.map(item=>{
-        data_show.push({
-            style: 'chips',
-            title: item,
-           // route:$route(mzitu_tag,{tag:item})
-        })
-    })
-}
-
-
-console.log(data_show)
-
-
-list = [{a:'daf'}, {b:'dafad'},{c:'adfd'}];
-list[1]=1;
-console.log(list)
+if(/导演/.test(data)){
+    console.log( data.match(/导演.*?<a href="(http.*?)">(.*?)<\/a>/)[2]);
+    console.log( data.match(/导演.*?<a href="(http.*?)">(.*?)<\/a>/)[1]);     
+};

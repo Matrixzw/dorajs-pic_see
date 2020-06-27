@@ -1,0 +1,217 @@
+{
+    "title": "taotu55",
+    "indexUrl": "https://www.taotu55.net/w/61/index.html",
+    "indexRule": {
+        "item": {
+            "selector": "div.thumbnail"
+        },
+        "cover": {
+            "selector": "a>img",
+            "fun": "attr",
+            "param": "src"
+        },
+        "idCode": {
+            "selector": "a",
+            "fun": "attr",
+            "param": "href",
+            "regex": "(.*?).html"
+        },
+        "title": {
+            "selector": "a>img",
+            "fun": "attr",
+            "param": "alt"
+        },
+        "datetime": {
+            "selector": "div.caption span",
+            "fun": "text"
+        }
+    },
+    "galleryUrl": "{idCode:}{pageStr:_{page:1}}.html",
+    "galleryRule": {
+        "pictureRule": {
+            "item": {
+                "selector": "div.content>img"
+            },
+            "thumbnail": {
+                "selector": "img",
+                "fun": "attr",
+                "param": "src"
+            },
+            "url": {
+                "selector": "img",
+                "fun": "attr",
+                "param": "src"
+            }
+        },
+        "description": {
+            "selector": "[name='description']",
+            "fun": "attr",
+            "param": "content"
+        },
+        "tags": {
+            "selector": "[name='keywords']",
+            "fun": "attr",
+            "param": "content",
+            "regex": "([^,]+)"
+        }
+    },
+    "flag": "preloadGallery|noRating",
+    "categories": [
+        {
+            "cid": 1,
+            "title": "首页",
+            "url": "https://www.taotu55.net/w/1/list_1_{page:1}.html"
+        },
+        {
+            "cid": 2,
+            "title": "AISS爱丝",
+            "url": "https://www.taotu55.net/w/41/list_41_{page:1}.html"
+        },
+        {
+            "cid": 3,
+            "title": "ROSI写真",
+            "url": "https://www.taotu55.net/w/40/list_40_{page:1}.html"
+        },
+        {
+            "cid": 4,
+            "title": "ISHOW爱秀",
+            "url": "https://www.taotu55.net/w/17/list_17_{page:1}.html"
+        },
+        {
+            "cid": 5,
+            "title": "DKGirl御女郎",
+            "url": "https://www.taotu55.net/w/88/list_88_{page:1}.html"
+        },
+        {
+            "cid": 6,
+            "title": "QingDouKe青豆客",
+            "url": "https://www.taotu55.net/w/85/list_85_{page:1}.html"
+        },
+        {
+            "cid": 7,
+            "title": "YouMi尤蜜荟",
+            "url": "https://www.taotu55.net/w/87/list_87_{page:1}.html"
+        },
+        {
+            "cid": 8,
+            "title": "KeLaGirls克拉女神",
+            "url": "https://www.taotu55.net/w/97/list_97_{page:1}.html"
+        },
+        {
+            "cid": 9,
+            "title": "Girlt果团网",
+            "url": "https://www.taotu55.net/w/90/list_90_{page:1}.html"
+        },
+        {
+            "cid": 10,
+            "title": "HuaYang花漾",
+            "url": "https://www.taotu55.net/w/95/list_95_{page:1}.html"
+        },
+        {
+            "cid": 11,
+            "title": "MICAT猫萌榜",
+            "url": "https://www.taotu55.net/w/91/list_91_{page:1}.html"
+        },
+        {
+            "cid": 12,
+            "title": "CANDY糖果画报",
+            "url": "https://www.taotu55.net/w/92/list_92_{page:1}.html"
+        },
+        {
+            "cid": 13,
+            "title": "LeYuan星乐园",
+            "url": "https://www.taotu55.net/w/93/list_93_{page:1}.html"
+        },
+        {
+            "cid": 14,
+            "title": "MiiTao蜜桃社",
+            "url": "https://www.taotu55.net/w/89/list_89_{page:1}.html"
+        },
+        {
+            "cid": 15,
+            "title": "TASTE顽味生活",
+            "url": "https://www.taotu55.net/w/94/list_94_{page:1}.html"
+        },
+        {
+            "cid": 16,
+            "title": "Pans写真",
+            "url": "https://www.taotu55.net/w/76/list_76_{page:1}.html"
+        },
+        {
+            "cid": 17,
+            "title": "Ugirls尤果网",
+            "url": "https://www.taotu55.net/w/8/list_8_{page:1}.html"
+        },
+        {
+            "cid": 18,
+            "title": "Toutiaogirls头条女神",
+            "url": "https://www.taotu55.net/w/12/list_12_{page:1}.html"
+        },
+        {
+            "cid": 19,
+            "title": "秀人",
+            "url": "https://www.taotu55.net/w/61/list_61_{page:1}.html"
+        },
+        {
+            "cid": 20,
+            "title": "FEILIN嗲囡囡",
+            "url": "https://www.taotu55.net/w/5/list_5_{page:1}.html"
+        },
+        {
+            "cid": 21,
+            "title": "BoLoli波菠社",
+            "url": "https://www.taotu55.net/w/10/list_10_{page:1}.html"
+        },
+        {
+            "cid": 22,
+            "title": "IMISS爱蜜社",
+            "url": "https://www.taotu55.net/w/45/list_45_{page:1}.html"
+        },
+        {
+            "cid": 23,
+            "title": "TGOD推女神",
+            "url": "https://www.taotu55.net/w/21/list_21_{page:1}.html"
+        },
+        {
+            "cid": 24,
+            "title": "MiStar魅妍社",
+            "url": "https://www.taotu55.net/w/60/list_60_{page:1}.html"
+        },
+        {
+            "cid": 25,
+            "title": "MFStar模范学院",
+            "url": "https://www.taotu55.net/w/77/list_77_{page:1}.html"
+        },
+        {
+            "cid": 26,
+            "title": "LEGBABY美腿宝贝",
+            "url": "https://www.taotu55.net/w/20/list_20_{page:1}.html"
+        },
+        {
+            "cid": 27,
+            "title": "MYGIRL美媛馆",
+            "url": "https://www.taotu55.net/w/9/list_9_{page:1}.html"
+        },
+        {
+            "cid": 28,
+            "title": "YouWu尤物馆",
+            "url": "https://www.taotu55.net/w/78/list_78_{page:1}.html"
+        },
+        {
+            "cid": 29,
+            "title": "UXING优星馆",
+            "url": "https://www.taotu55.net/w/23/list_23_{page:1}.html"
+        },
+        {
+            "cid": 30,
+            "title": "TuiGirl推女郎",
+            "url": "https://www.taotu55.net/w/79/list_79_{page:1}.html"
+        },
+        {
+            "cid": 31,
+            "title": "未分类套图",
+            "url": "https://www.taotu55.net/w/31/list_31_{page:1}.html"
+        }
+    ],
+    "versionCode": 1
+}

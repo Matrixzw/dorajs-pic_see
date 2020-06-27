@@ -1,11 +1,12 @@
 const mzitu_zhuanti = require("./mzitu_zhuanti");
 
 module.exports = {
-    type: 'drawer',
+    type: 'topTab',
     //image: $icon('bookmarks'),
     author: {
         name: 'zz'
     },
+    searchRoute: $route('mzitu'), 
     async fetch() {
         let list = [];
         args = [

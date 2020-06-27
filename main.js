@@ -5,3 +5,5 @@ if (typeof $dora == 'undefined') {
 }
 
 console.info('Congratulation, your addon runs successfully!')
+
+global.url = 'adfkahkjlaflk';

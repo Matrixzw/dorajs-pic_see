@@ -5,6 +5,7 @@ const spider = require('../assets/spider')
 来源：mzitu.js
 输入：整个单个data数据块，里面包含单个的image_url title date second_url
 输出： category， date_time,  page_all, image_url_b ; title,
+描述：控制了第二层页面的内容，包括了最上面的tag用了chips style，中间的pic主要内容，还是用了book style。再下面的热门推荐和网页最爱。
 */
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
 
                 let data_b = await spider.spider_mizitu_m_b(second_url);
 
-                
+
 
                 data_show.push({
                     style: 'book',
@@ -47,10 +48,8 @@ module.exports = {
                     let actions = [];
                     data_b[0].category.map(item => {
                         actions.unshift({
-                            
-                            
-                                title: item.tag_name,
-                                route: $route('mzitu', { tag_url: item.tag_url })
+                            title: item.tag_name,
+                            route: $route('mzitu', { tag_url: item.tag_url })
                         }
                             //route:$route(mzitu_tag,{tag:item})
                         )
@@ -76,33 +75,40 @@ module.exports = {
             console.log(page)
             $ui.toast('已经到底了嘤'); //使用 try catch捕获异常
             data_show.push({
-                style:'dashboard',
+                style: 'dashboard',
                 title: '热门推荐',
-                color:'white',
+                color: 'white',
                 textColor: 'black'
             });
+
+
             let data_b = await spider.spider_mizitu_m_b_2(args.second_url); //必须要用await 不然就返回Promise了
-            console.log('mzitu_b',data_b[1]); //consloe.log的时候必须加上位置，不然找到找不到了
-            data_b[0].map(item=>data_show.push({
-                style:'book',
-                image:{
-                    value:item.image_url,
-                    headers:headers
+            //console.log('mzitu_b', data_b[1]); //consloe.log的时候必须加上位置，不然找到找不到了
+            data_b[0].map(item => data_show.push({
+                style: 'book',
+                image: {
+                    value: item.image_url,
+                    headers: headers
                 },
-                title:item.title,
-                spanCount:3,
-                route:$route('mzitu_b',{second_url:item.second_url_2})
+                title: item.title,
+                spanCount: 3,
+                route: $route('mzitu_b', { second_url: item.second_url_2 })
             }));
             data_show.push({
-                style:'label',
+                style: 'label',
                 title: '网友最爱',
-                color:'red',
-                spanCount:12
+                color: 'red',
+                spanCount: 12
             })
-            data_b[1].map(item=>data_show.push({
-                title:item.title,
-                route:$route('mzitu_b',{second_url:item.second_url_2})
+            data_b[1].map(item => data_show.push({
+                title: item.title,
+                route: $route('mzitu_b', { second_url: item.second_url_2 })
             }));
+
+            
+
+            console.log('这里应该是data最后出现一次的data_show，应该是最后一点数据',data_show)
+
             return data_show
         }
     }

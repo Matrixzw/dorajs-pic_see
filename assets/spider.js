@@ -200,8 +200,8 @@ function spider_mizitu_m_zhuanti() {
 
 /*
 输入：第二层页面的url second_url
-输出：热门推荐的目录，包括image_url, title,second_url_2
-描述：
+输出：热门推荐的目录，包括image_url, title,second_url_2。包括网友爱看的内容两个东西包装成一个数组
+描述：是一个数组。
 */
 
 function spider_mizitu_m_b_2(second_url) {
@@ -239,6 +239,16 @@ function spider_mizitu_m_b_2(second_url) {
 }
 
 
+/*
+输入：最后的items数组，里面包含url，title。
+输出：不输出，就是保存到一个文件夹中
+*/
+
+function spider_mizitu_m_download(items){
+
+}
+
+
 module.exports = {
     spider_mizitu, //第一个函数，但是没有调用过，处理的是电脑端网页的模式
     spider_mizitu_m, //网页的第一层页面
@@ -254,13 +264,13 @@ module.exports = {
 // console.log(url_m);
 //'https://m.mzitu.com/search/%E6%9D%A8%E6%99%A8/'
 second_url = 'https://m.mzitu.com/170059'
-//url = 'https://m.mzitu.com/zipai/comment-page-453/#comments'
-// items = [];
-// url_m = 'https://m.mzitu.com/zhuanti/'
-// console.log(spider_mizitu_m_b_2(second_url).then(res => {
-//     console.log(res[1])
+url = 'https://m.mzitu.com/zipai/comment-page-453/#comments'
+items = [];
+url_m = 'https://m.mzitu.com/zhuanti/'
+console.log(spider_mizitu_m_b(second_url).then(res => {
+    console.log(res[0].image_url_b)
 
-// }))
+}))
 
 
 
