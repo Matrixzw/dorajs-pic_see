@@ -1,9 +1,9 @@
 {
   "name": "dorajs-matrixzw-ystuji",
-  "displayName": "妹纸图",
-  "version": "1.0.1",
+  "displayName": "Buon Dua",
+  "version": "1.0.2",
   "uuid": "d6f3e048-7c49-45c1-b871-f8b0742f5067",
-  "description": "m.mzitu.com",
+  "description": "https://buondua.com/",
   "icon": "/assets/icon.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",

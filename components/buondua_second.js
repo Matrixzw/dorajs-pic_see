@@ -16,9 +16,8 @@ module.exports = {
 
 
         let $ = await get_$(second_url)
-
+        this.subtitle = $('div.article-info').text()
         if (!page) {
-            this.subtitle = $('div.article-info').text()
 
             this.all_page = $('div.pagination-list').eq(0).find('span').length
 
@@ -33,7 +32,7 @@ module.exports = {
 
             items.push({
                 style: 'chips',
-                title: this.title,
+                title: this.title +'\t' +  $('div.article-info').text(),
                 actions
             })
         }
@@ -42,27 +41,29 @@ module.exports = {
 
         lists = $('div.article-fulltext>p')
 
+        page = page ? page : 1;
+
         lists.each((i, ele) => {
             items.push({
                 style: 'book',
+                title: ((page - 1) * 20) + i + 1,
                 spanCount: 6,
-                image: $(ele).find('img').attr('data-src')
+                image: $(ele).find('img').attr('data-src'),
+                route: $route('@image', { url: $(ele).find('img').attr('data-src') })
             })
         });
 
-        nextPage = page ? page + 1 : 2;
+        nextPage = page + 1;
 
-        if (nextPage < this.all_page) {
+        if (nextPage <= this.all_page) {
             return {
                 items,
                 nextPage
             }
         } else {
-            $ui.toast('已经到底了！')
+            $ui.toast(`${this.all_page}页图片加载完毕`)
+            return items
         }
-
-
-
 
     }
 }

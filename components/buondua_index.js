@@ -20,10 +20,11 @@ module.exports = {
             data.map(item => {
                 items.push({
                     title: item.title,
-                    style: 'book',
+                    style: 'vod',
                     image: item.img_url,
                     spanCount: 4,
-                    route: $route('buondua_second', { second_url: encodeURI(base_url + item.second_url) })
+                    summary: item.tag,
+                    route: $route('buondua_second_index', { second_url: encodeURI(base_url + item.second_url) })
                 })
             })
             return {
