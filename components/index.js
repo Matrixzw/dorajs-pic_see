@@ -7,25 +7,9 @@ module.exports = {
   async fetch() {
     return [
       {
-        title: 'taotu55',
-        route: $route('taotu55')
-      },
-      {
-        title: '妹纸图',
-        route: $route('mzitu_drawer'),
-        image: $icon('home'),
-      },
-      {
-        title: "avmoo",
-        route:$route('avmoo')
-        
-      },
-      {
-        title: '下载文件',
-        route: $route('testpage')
+        title: 'buondua',
+        route: $route('buondua_index', { url: base_url + '/' })
       }
-
-
     ]
 
   }
