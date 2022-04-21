@@ -3,7 +3,7 @@ module.exports = {
     async fetch({ args }) {
         return [
             {
-                title: '图片',
+                title: this.title,
                 route: $route('buondua_second', { second_url: args.second_url })
             }, {
                 title: '其他作品',

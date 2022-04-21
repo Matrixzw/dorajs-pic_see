@@ -24,7 +24,7 @@ module.exports = {
                     image: item.img_url,
                     spanCount: 4,
                     summary: item.tag,
-                    route: $route('buondua_second_index', { second_url: encodeURI(base_url + item.second_url) })
+                    route: $route('buondua_second', { second_url: encodeURI(base_url + item.second_url) })
                 })
             })
             return {

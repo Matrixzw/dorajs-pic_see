@@ -1,10 +1,12 @@
 
 const { get_second, get_$ } = require("../script/spider")
 
-
+const mysql = require('mysql')
 
 module.exports = {
     type: 'list',
+
+    
     async fetch({ args, page }) {
         let items = []
         let second_url = '';
