@@ -8,8 +8,14 @@ async function get_first(url) {
     let items = []
 
     url = encodeURI(url)
+    var $
 
-    var $ = await get_$(url)
+    try{
+        $ = await get_$(url)
+    }catch(err){
+        throw err
+    }
+
 
     lists = $('div[class="items-row column is-half-desktop is-half-tablet is-half-mobile"]')
 
@@ -47,24 +53,24 @@ module.exports = {
 }
 
 
-async function get_$(url, try_time = 5) {
+async function get_$(url, try_time = 6) {
 
     let raw_html = '';
 
     if (try_time) {
         try {
-            //await time_delay(500)
+            await time_delay(500)
             res = await axios(encodeURI(url), { timeout: 2000 });
         } catch {
+            console.log('再次尝试：', 7 - try_time)
             return get_$(url, try_time - 1)
         }
         //显示进行了几次操作之后获得的数据，一般都是一次就行了
-        console.log('尝试次数：', 6 - try_time)
         raw_html = res.data;
         $ = cheerio.load(raw_html)
         return $
     } else {
-        throw new Error('在进行五次尝试之后仍然没有获取到数据')
+        throw new Error('在进行6次尝试之后仍然没有获取到数据')
     }
 }
 
