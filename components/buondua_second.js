@@ -21,7 +21,7 @@ module.exports = {
 
     },
 
-    inactivated() {
+    destroyed() {
         connection.end()
     },
 
@@ -84,7 +84,7 @@ module.exports = {
                     route: $route('buondua_second_2', { second_url: args.second_url, flag: 2 })
                 })
 
-                
+
                 description = JSON.stringify({
                     style: 'chips',
                     title: this.title + '\t' + $('div.article-info').text(),
@@ -108,14 +108,14 @@ module.exports = {
                     route: $route('@image', { url: $(ele).find('img').attr('data-src') })
                 })
                 //开始图片写入操作
-                if(title == 0){
+                if (title == 0) {
                     let sql_params = [title, this.title + '-' + title, image, description];
                     sql_add_data(sql_params)
-                }else{
+                } else {
                     let sql_params = [title, this.title + '-' + title, image];
                     sql_add_data(sql_params)
                 }
-                
+
             });
 
             nextPage = page + 1;
@@ -146,6 +146,20 @@ module.exports = {
             }
         } else if (this.flag == 1) {
             this.subtitle = '已经缓存完毕'
+
+            if (first_item.description) {
+                if (isJSON(first_item.description)) {
+                    items.push(JSON.parse(first_item.description))
+                } else {
+                    items.push({
+                        style: 'article',
+                        title: this.title,
+                        summary: first_item.description,
+                        time: first_item.description.match(/\d{2}.\d{2}.\d{2}.\d{2}.\d{4}/)[0]
+                    });
+                }
+            };
+
             let data = await sql_get_data(this.title);
             data.map((val, i) => {
                 items.push({
@@ -174,9 +188,9 @@ module.exports = {
             this.subtitle = '已下载'
 
             if (first_item.description) {
-                if(isJSON(first_item.description)){
+                if (isJSON(first_item.description)) {
                     items.push(JSON.parse(first_item.description))
-                }else{
+                } else {
                     items.push({
                         style: 'article',
                         title: this.title,
