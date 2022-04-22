@@ -10,9 +10,9 @@ async function get_first(url) {
     url = encodeURI(url)
     var $
 
-    try{
+    try {
         $ = await get_$(url)
-    }catch(err){
+    } catch (err) {
         throw err
     }
 
@@ -49,7 +49,9 @@ module.exports = {
     sql_change_flag,
     sql_get_data,
     rpc_trans,
-    sql_download
+    sql_download,
+    time_delay,
+    isJSON
 }
 
 
@@ -114,7 +116,7 @@ async function sql_add_data(sql_params) {
 
 function sql_get_flag(title) {
     return new Promise((resolve, reject) => {
-        connection.query(`select flag from ${sql_table} where title = ?`, title, (err, res) => {
+        connection.query(`select * from ${sql_table} where title = ?`, title, (err, res) => {
             //console.log(err)
             if (err) {
                 console.error('很可能这个error就是timeout')
@@ -124,10 +126,10 @@ function sql_get_flag(title) {
                 if (res.length == 0) {
                     // console.error(title)
                     //console.error('获取到了空的数组，就是代表没有缓存过数据');
-                    resolve(0)
+                    resolve({ flag: 0 })
                 }
                 if (res[0]) {
-                    resolve(res[0].flag)
+                    resolve(res[0])
                 }
             };
         });
@@ -237,4 +239,19 @@ function rpc_trans(data) {
         })
     })
 
+};
+
+
+function isJSON(str) {
+    if (typeof str == 'string') {
+        try {
+            JSON.parse(str);
+            return true;
+        } catch{
+            //console.log(e);
+            return false;
+        }
+    }else{
+        console.error('理论上不可能出现的情况，输入的不是string格式')
+    }
 }
