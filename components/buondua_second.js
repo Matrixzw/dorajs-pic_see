@@ -1,11 +1,11 @@
-const { get_second, get_$, sql_add_data, sql_get_flag, sql_get_data, rpc_trans, sql_download, sql_change_flag, time_delay } = require("../script/spider")
+const { get_second, get_$, sql_add_data, sql_get_flag, sql_get_data, rpc_trans, sql_download, sql_change_flag, time_delay, isJSON } = require("../script/spider")
 
 const mysql = require('mysql')
 
 
 module.exports = {
     type: 'list',
-    beforeCreate() {
+    async beforeCreate() {
 
         connection = mysql.createConnection({
             host: '192.168.2.26',
@@ -32,11 +32,13 @@ module.exports = {
 
         if (!page) {
             try {
-                this.flag = await sql_get_flag(this.title + '-0');
+                first_item = await sql_get_flag(this.title + '-0');
+                this.flag = first_item.flag
                 //console.log('获取到了flag数据')
             } catch {
                 console.error('其实没有获取flag参数')
-                this.flag = 0
+                this.refresh()
+                //this.flag = 0
             }
         }
 
@@ -82,12 +84,13 @@ module.exports = {
                     route: $route('buondua_second_2', { second_url: args.second_url, flag: 2 })
                 })
 
-                description = this.title + '\t' + $('div.article-info').text();
-                items.push({
+                
+                description = JSON.stringify({
                     style: 'chips',
-                    title: description,
-                    actions
+                    title: this.title + '\t' + $('div.article-info').text(),
+                    actions: actions
                 })
+                items.push(JSON.parse(description))
             }
 
             lists = $('div.article-fulltext>p')
@@ -170,14 +173,18 @@ module.exports = {
         } else if (this.flag > 1) {
             this.subtitle = '已下载'
 
-            // if (first_item.description) {
-            //     items.push({
-            //         style: 'article',
-            //         title: this.title,
-            //         summary: first_item.description,
-            //         time: first_item.description.match(/\d{4}.\d{2}.\d{2}/)
-            //     });
-            // }
+            if (first_item.description) {
+                if(isJSON(first_item.description)){
+                    items.push(JSON.parse(first_item.description))
+                }else{
+                    items.push({
+                        style: 'article',
+                        title: this.title,
+                        summary: first_item.description,
+                        time: first_item.description.match(/\d{2}.\d{2}.\d{2}.\d{2}.\d{4}/)[0]
+                    });
+                }
+            }
 
 
             for (i = 0; i < this.flag; i++) {
