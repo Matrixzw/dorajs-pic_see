@@ -1,4 +1,4 @@
-const { get_second, get_$, sql_add_data, sql_get_flag, sql_get_data, rpc_trans, sql_download, sql_change_flag } = require("../script/spider")
+const { get_second, get_$, sql_add_data, sql_get_flag, sql_get_data, rpc_trans, sql_download, sql_change_flag, time_delay } = require("../script/spider")
 
 const mysql = require('mysql')
 
@@ -6,7 +6,7 @@ const mysql = require('mysql')
 module.exports = {
     type: 'list',
     beforeCreate() {
-        
+
         connection = mysql.createConnection({
             host: '192.168.2.26',
             user: 'zzw',
@@ -15,11 +15,13 @@ module.exports = {
             database: 'xiuren',
             "useConnectionPooling": true //增加该配置
         })
-
         connection.connect()
+
+        await time_delay(1000)
+
     },
 
-    destroyed() {
+    inactivated() {
         connection.end()
     },
 
@@ -29,10 +31,10 @@ module.exports = {
 
 
         if (!page) {
-            try{
-                this.flag = await sql_get_flag( this.title + '-0');
-                console.log('获取到了flag数据')
-            }catch{
+            try {
+                this.flag = await sql_get_flag(this.title + '-0');
+                //console.log('获取到了flag数据')
+            } catch {
                 console.error('其实没有获取flag参数')
                 this.flag = 0
             }
@@ -47,8 +49,17 @@ module.exports = {
                 second_url = args.second_url
             }
 
-
-            let $ = await get_$(second_url)
+            try {
+                $ = await get_$(second_url)
+            } catch (err) {
+                console.error(err);
+                items.push({
+                    style: 'label',
+                    title: '在进行多次尝试之后仍然没有获取数据，请检查网络',
+                    spanCount: 12
+                })
+                return items
+            }
             //this.subtitle = $('div.article-info').text()
             if (!page) {
                 //this.subtitle = '正在缓存'
@@ -94,8 +105,14 @@ module.exports = {
                     route: $route('@image', { url: $(ele).find('img').attr('data-src') })
                 })
                 //开始图片写入操作
-                let sql_params = [title, this.title + '-' + title, image, description];
-                sql_add_data( sql_params)
+                if(title == 0){
+                    let sql_params = [title, this.title + '-' + title, image, description];
+                    sql_add_data(sql_params)
+                }else{
+                    let sql_params = [title, this.title + '-' + title, image];
+                    sql_add_data(sql_params)
+                }
+                
             });
 
             nextPage = page + 1;
@@ -107,7 +124,7 @@ module.exports = {
                 }
             } else {
                 $ui.toast(`${this.all_page}页图片加载完毕`)
-                sql_change_flag( 1, this.title)
+                sql_change_flag(1, this.title)
                 //在底部添加一个传输下载的按钮
                 items.push({
                     style: 'chips',
@@ -117,7 +134,7 @@ module.exports = {
                         onClick: async () => {
                             let data = await sql_download(this.title);
                             rpc_trans(data);
-                            sql_change_flag( data.length, this.title)
+                            sql_change_flag(data.length, this.title)
                         }
                     }]
                 });
@@ -144,6 +161,7 @@ module.exports = {
                         let data = await sql_download(this.title);
                         rpc_trans(data);
                         sql_change_flag(data.length, this.title)
+                        $ui.toast('已经完成flag的更改：', data.length)
                     }
                 }]
             });
