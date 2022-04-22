@@ -14,7 +14,17 @@ module.exports = {
             url = args.url
         }
 
-        let data = await get_first(url);
+        try {
+            data = await get_first(url);
+        } catch(err){
+            console.error(err);
+            items.push({
+                style: 'label',
+                title: '在进行多次尝试之后仍然没有获取数据，请检查网络',
+                spanCount: 12
+            })
+            return items
+        }
 
         if (data) {
             data.map(item => {
