@@ -68,22 +68,22 @@ var mysql = require('mysql')
 //开始各种函数的配置
 
 
-connection = mysql.createConnection({
-    host: '192.168.2.26',
-    user: 'zzw',
-    password: 'admin',
-    port: '3306',
-    database: 'xiuren'
-});
+// connection = mysql.createConnection({
+//     host: '192.168.2.26',
+//     user: 'zzw',
+//     password: 'admin',
+//     port: '3306',
+//     database: 'xiuren'
+// });
 
-sql_table = 'buondua_data'
-sql_params = [0, 'Coser@水淼aqua Vol.115: (120 photos)-0', 'https://i0.wp.com/kul.mrcong.com/images/2022/04/20/Coser-aqua-Vol.115-MrCong.com-015.webp?q=90&f=auto']
+// sql_table = 'buondua_data'
+// sql_params = [0, 'Coser@水淼aqua Vol.115: (120 photos)-0', 'https://i0.wp.com/kul.mrcong.com/images/2022/04/20/Coser-aqua-Vol.115-MrCong.com-015.webp?q=90&f=auto']
 
 
-sql_get_data('Coser@水淼aqua Vol.115: (120 photos)').then(res=>{
-    console.log(res)
-})
-connection.end()
+// sql_get_data('Coser@水淼aqua Vol.115: (120 photos)').then(res=>{
+//     console.log(res)
+// })
+// connection.end()
 
 //写入操作
 function sql_add_data(sql_params, flag) {
@@ -136,7 +136,7 @@ function sql_get_flag(title) {
 //读取操作
 function sql_get_data(title) {
     return new Promise((resolve, reject) => {
-        connection.query(`select * from ${sql_table} where title like ? order by id`, title +'%', (err, res) => {
+        connection.query(`select * from ${sql_table} where title like ? order by id`, title + '%', (err, res) => {
             //console.log(err)
             if (err) {
                 reject('some thing was wrong! in ')
@@ -162,35 +162,15 @@ async function sql_change_flag(flag, title) {
 }
 
 
-function sql_download(title) {
-    return new Promise((resolve, reject) => {
-        connection.query(`select * from ${sql_table} where title regexp ?`, title.replace(/\[|\]/g, '.'), (err, res) => {
-            if (err) {
-                console.error('在sql_download中的地方出错了')
-                console.error(err)
-            } else if (res) {
-                let items = [];
-                res.map(item => {
-                    items.push({
-                        title: title + '/' + item.id + '.jpg',
-                        img_url: item.img_url
-                    })
-                })
-                resolve(items)
-            } else {
-                reject(res)
-            }
-        })
-
-
-    })
-
-}
 
 //sql_download('[XIAOYU画语界]VOL.734_女神杨晨晨YOME丽江心愿旅拍杏色低胸服饰配肉丝完美诱惑写真99P')
 
 
+str = `XIUREN No.4355: (64 photos)	
+Buondua
+-
 
-if(null == false){
-    console.log('afads')
-}
+15:22 19-04-2022 
+`
+
+console.log(str.match(/\d{2}.\d{2}.\d{2}.\d{2}.\d{4}/)[0])
