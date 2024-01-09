@@ -2,198 +2,170 @@
 # yarn lockfile v1
 
 
-"axios@^0.26.1":
-  "integrity" "sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/axios/-/axios-0.26.1.tgz"
-  "version" "0.26.1"
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/axios/-/axios-0.26.1.tgz"
   dependencies:
-    "follow-redirects" "^1.14.8"
+    follow-redirects "^1.14.8"
 
-"bignumber.js@9.0.0":
-  "integrity" "sha512-t/OYhhJ2SD+YGBQcjY8GzzDHEk9f3nerxjtfa6tlMXfe7frs/WozhvCNoGvpM0P3bNf3Gq5ZRMlGr5f3r4/N8A=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/bignumber.js/-/bignumber.js-9.0.0.tgz"
-  "version" "9.0.0"
+bignumber.js@9.0.0:
+  version "9.0.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/bignumber.js/-/bignumber.js-9.0.0.tgz"
 
-"boolbase@^1.0.0":
-  "integrity" "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/boolbase/-/boolbase-1.0.0.tgz"
-  "version" "1.0.0"
+boolbase@^1.0.0:
+  version "1.0.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/boolbase/-/boolbase-1.0.0.tgz"
 
-"cheerio-select@^1.5.0":
-  "integrity" "sha512-eq0GdBvxVFbqWgmCm7M3XGs1I8oLy/nExUnh6oLqmBditPO9AqQJrkslDpMun/hZ0yyTs8L0m85OHp4ho6Qm9g=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/cheerio-select/-/cheerio-select-1.6.0.tgz"
-  "version" "1.6.0"
+cheerio-select@^1.5.0:
+  version "1.6.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/cheerio-select/-/cheerio-select-1.6.0.tgz"
   dependencies:
-    "css-select" "^4.3.0"
-    "css-what" "^6.0.1"
-    "domelementtype" "^2.2.0"
-    "domhandler" "^4.3.1"
-    "domutils" "^2.8.0"
+    css-select "^4.3.0"
+    css-what "^6.0.1"
+    domelementtype "^2.2.0"
+    domhandler "^4.3.1"
+    domutils "^2.8.0"
 
-"cheerio@^1.0.0-rc.10":
-  "integrity" "sha512-g0J0q/O6mW8z5zxQ3A8E8J1hUgp4SMOvEoW/x84OwyHKe/Zccz83PVT4y5Crcr530FV6NgmKI1qvGTKVl9XXVw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/cheerio/-/cheerio-1.0.0-rc.10.tgz"
-  "version" "1.0.0-rc.10"
+cheerio@^1.0.0-rc.10:
+  version "1.0.0-rc.10"
+  resolved "https://repo.nju.edu.cn/repository/npm/cheerio/-/cheerio-1.0.0-rc.10.tgz"
   dependencies:
-    "cheerio-select" "^1.5.0"
-    "dom-serializer" "^1.3.2"
-    "domhandler" "^4.2.0"
-    "htmlparser2" "^6.1.0"
-    "parse5" "^6.0.1"
-    "parse5-htmlparser2-tree-adapter" "^6.0.1"
-    "tslib" "^2.2.0"
+    cheerio-select "^1.5.0"
+    dom-serializer "^1.3.2"
+    domhandler "^4.2.0"
+    htmlparser2 "^6.1.0"
+    parse5 "^6.0.1"
+    parse5-htmlparser2-tree-adapter "^6.0.1"
+    tslib "^2.2.0"
 
-"core-util-is@~1.0.0":
-  "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/core-util-is/-/core-util-is-1.0.3.tgz"
-  "version" "1.0.3"
+core-util-is@~1.0.0:
+  version "1.0.3"
+  resolved "https://repo.nju.edu.cn/repository/npm/core-util-is/-/core-util-is-1.0.3.tgz"
 
-"css-select@^4.3.0":
-  "integrity" "sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/css-select/-/css-select-4.3.0.tgz"
-  "version" "4.3.0"
+css-select@^4.3.0:
+  version "4.3.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/css-select/-/css-select-4.3.0.tgz"
   dependencies:
-    "boolbase" "^1.0.0"
-    "css-what" "^6.0.1"
-    "domhandler" "^4.3.1"
-    "domutils" "^2.8.0"
-    "nth-check" "^2.0.1"
+    boolbase "^1.0.0"
+    css-what "^6.0.1"
+    domhandler "^4.3.1"
+    domutils "^2.8.0"
+    nth-check "^2.0.1"
 
-"css-what@^6.0.1":
-  "integrity" "sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/css-what/-/css-what-6.1.0.tgz"
-  "version" "6.1.0"
+css-what@^6.0.1:
+  version "6.1.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/css-what/-/css-what-6.1.0.tgz"
 
-"dom-serializer@^1.0.1", "dom-serializer@^1.3.2":
-  "integrity" "sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/dom-serializer/-/dom-serializer-1.4.1.tgz"
-  "version" "1.4.1"
+dom-serializer@^1.0.1, dom-serializer@^1.3.2:
+  version "1.4.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/dom-serializer/-/dom-serializer-1.4.1.tgz"
   dependencies:
-    "domelementtype" "^2.0.1"
-    "domhandler" "^4.2.0"
-    "entities" "^2.0.0"
+    domelementtype "^2.0.1"
+    domhandler "^4.2.0"
+    entities "^2.0.0"
 
-"domelementtype@^2.0.1", "domelementtype@^2.2.0":
-  "integrity" "sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/domelementtype/-/domelementtype-2.3.0.tgz"
-  "version" "2.3.0"
+domelementtype@^2.0.1, domelementtype@^2.2.0:
+  version "2.3.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/domelementtype/-/domelementtype-2.3.0.tgz"
 
-"domhandler@^4.0.0", "domhandler@^4.2.0", "domhandler@^4.3.1":
-  "integrity" "sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/domhandler/-/domhandler-4.3.1.tgz"
-  "version" "4.3.1"
+domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
+  version "4.3.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/domhandler/-/domhandler-4.3.1.tgz"
   dependencies:
-    "domelementtype" "^2.2.0"
+    domelementtype "^2.2.0"
 
-"domutils@^2.5.2", "domutils@^2.8.0":
-  "integrity" "sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/domutils/-/domutils-2.8.0.tgz"
-  "version" "2.8.0"
+domutils@^2.5.2, domutils@^2.8.0:
+  version "2.8.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/domutils/-/domutils-2.8.0.tgz"
   dependencies:
-    "dom-serializer" "^1.0.1"
-    "domelementtype" "^2.2.0"
-    "domhandler" "^4.2.0"
+    dom-serializer "^1.0.1"
+    domelementtype "^2.2.0"
+    domhandler "^4.2.0"
 
-"entities@^2.0.0":
-  "integrity" "sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/entities/-/entities-2.2.0.tgz"
-  "version" "2.2.0"
+entities@^2.0.0:
+  version "2.2.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/entities/-/entities-2.2.0.tgz"
 
-"follow-redirects@^1.14.8":
-  "integrity" "sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/follow-redirects/-/follow-redirects-1.14.9.tgz"
-  "version" "1.14.9"
+follow-redirects@^1.14.8:
+  version "1.15.4"
+  resolved "https://repo.nju.edu.cn/repository/npm/follow-redirects/-/follow-redirects-1.15.4.tgz#cdc7d308bf6493126b17ea2191ea0ccf3e535adf"
 
-"htmlparser2@^6.1.0":
-  "integrity" "sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/htmlparser2/-/htmlparser2-6.1.0.tgz"
-  "version" "6.1.0"
+htmlparser2@^6.1.0:
+  version "6.1.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/htmlparser2/-/htmlparser2-6.1.0.tgz"
   dependencies:
-    "domelementtype" "^2.0.1"
-    "domhandler" "^4.0.0"
-    "domutils" "^2.5.2"
-    "entities" "^2.0.0"
+    domelementtype "^2.0.1"
+    domhandler "^4.0.0"
+    domutils "^2.5.2"
+    entities "^2.0.0"
 
-"inherits@~2.0.3":
-  "integrity" "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/inherits/-/inherits-2.0.4.tgz"
-  "version" "2.0.4"
+inherits@~2.0.3:
+  version "2.0.4"
+  resolved "https://repo.nju.edu.cn/repository/npm/inherits/-/inherits-2.0.4.tgz"
 
-"isarray@~1.0.0":
-  "integrity" "sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/isarray/-/isarray-1.0.0.tgz"
-  "version" "1.0.0"
+isarray@~1.0.0:
+  version "1.0.0"
+  resolved "https://repo.nju.edu.cn/repository/npm/isarray/-/isarray-1.0.0.tgz"
 
-"mysql@^2.18.1":
-  "integrity" "sha512-Bca+gk2YWmqp2Uf6k5NFEurwY/0td0cpebAucFpY/3jhrwrVGuxU2uQFCHjU19SJfje0yQvi+rVWdq78hR5lig=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/mysql/-/mysql-2.18.1.tgz"
-  "version" "2.18.1"
+mysql@^2.18.1:
+  version "2.18.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/mysql/-/mysql-2.18.1.tgz"
   dependencies:
-    "bignumber.js" "9.0.0"
-    "readable-stream" "2.3.7"
-    "safe-buffer" "5.1.2"
-    "sqlstring" "2.3.1"
+    bignumber.js "9.0.0"
+    readable-stream "2.3.7"
+    safe-buffer "5.1.2"
+    sqlstring "2.3.1"
 
-"nth-check@^2.0.1":
-  "integrity" "sha512-it1vE95zF6dTT9lBsYbxvqh0Soy4SPowchj0UBGj/V6cTPnXXtQOPUbhZ6CmGzAD/rW22LQK6E96pcdJXk4A4w=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/nth-check/-/nth-check-2.0.1.tgz"
-  "version" "2.0.1"
+nth-check@^2.0.1:
+  version "2.0.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/nth-check/-/nth-check-2.0.1.tgz"
   dependencies:
-    "boolbase" "^1.0.0"
+    boolbase "^1.0.0"
 
-"parse5-htmlparser2-tree-adapter@^6.0.1":
-  "integrity" "sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz"
-  "version" "6.0.1"
+parse5-htmlparser2-tree-adapter@^6.0.1:
+  version "6.0.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz"
   dependencies:
-    "parse5" "^6.0.1"
+    parse5 "^6.0.1"
 
-"parse5@^6.0.1":
-  "integrity" "sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/parse5/-/parse5-6.0.1.tgz"
-  "version" "6.0.1"
+parse5@^6.0.1:
+  version "6.0.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/parse5/-/parse5-6.0.1.tgz"
 
-"process-nextick-args@~2.0.0":
-  "integrity" "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
-  "version" "2.0.1"
+process-nextick-args@~2.0.0:
+  version "2.0.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
 
-"readable-stream@2.3.7":
-  "integrity" "sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/readable-stream/-/readable-stream-2.3.7.tgz"
-  "version" "2.3.7"
+readable-stream@2.3.7:
+  version "2.3.7"
+  resolved "https://repo.nju.edu.cn/repository/npm/readable-stream/-/readable-stream-2.3.7.tgz"
   dependencies:
-    "core-util-is" "~1.0.0"
-    "inherits" "~2.0.3"
-    "isarray" "~1.0.0"
-    "process-nextick-args" "~2.0.0"
-    "safe-buffer" "~5.1.1"
-    "string_decoder" "~1.1.1"
-    "util-deprecate" "~1.0.1"
+    core-util-is "~1.0.0"
+    inherits "~2.0.3"
+    isarray "~1.0.0"
+    process-nextick-args "~2.0.0"
+    safe-buffer "~5.1.1"
+    string_decoder "~1.1.1"
+    util-deprecate "~1.0.1"
 
-"safe-buffer@~5.1.0", "safe-buffer@~5.1.1", "safe-buffer@5.1.2":
-  "integrity" "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/safe-buffer/-/safe-buffer-5.1.2.tgz"
-  "version" "5.1.2"
+safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+  version "5.1.2"
+  resolved "https://repo.nju.edu.cn/repository/npm/safe-buffer/-/safe-buffer-5.1.2.tgz"
 
-"sqlstring@2.3.1":
-  "integrity" "sha1-R1OT/56RR5rqYtyvDKPRSYOn+0A="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/sqlstring/-/sqlstring-2.3.1.tgz"
-  "version" "2.3.1"
+sqlstring@2.3.1:
+  version "2.3.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/sqlstring/-/sqlstring-2.3.1.tgz"
 
-"string_decoder@~1.1.1":
-  "integrity" "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/string_decoder/-/string_decoder-1.1.1.tgz"
-  "version" "1.1.1"
+string_decoder@~1.1.1:
+  version "1.1.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/string_decoder/-/string_decoder-1.1.1.tgz"
   dependencies:
-    "safe-buffer" "~5.1.0"
+    safe-buffer "~5.1.0"
 
-"tslib@^2.2.0":
-  "integrity" "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw=="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/tslib/-/tslib-2.3.1.tgz"
-  "version" "2.3.1"
+tslib@^2.2.0:
+  version "2.3.1"
+  resolved "https://repo.nju.edu.cn/repository/npm/tslib/-/tslib-2.3.1.tgz"
 
-"util-deprecate@~1.0.1":
-  "integrity" "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8="
-  "resolved" "https://repo.nju.edu.cn/repository/npm/util-deprecate/-/util-deprecate-1.0.2.tgz"
-  "version" "1.0.2"
+util-deprecate@~1.0.1:
+  version "1.0.2"
+  resolved "https://repo.nju.edu.cn/repository/npm/util-deprecate/-/util-deprecate-1.0.2.tgz"
